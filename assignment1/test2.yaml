@@ -1,0 +1,17 @@
+world:
+  map: {size: [20, 20], grid_size: 0.05, boundary: true}
+
+robot:
+  - number: 20
+    distribution: {name: 'circle', radius: 3.0, center: [5, 5]}
+    kinematics: {name: diff}
+    shape: {name: circle, radius: 0.2}
+    vel_min: [0.0, -1.5]
+    vel_max: [1.0,  1.5]
+    behavior: {name: 'rl_passive_2', center: [5.0, 5.0], radius: 1.0}
+
+
+obstacle: []
+
+
+
