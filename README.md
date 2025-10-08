@@ -4,10 +4,10 @@
 
 | Name                                         |   Email  |
 |--------------------------------------------- |----------|
-| Mohamed Hashem Abdou                         |          |
 | Bernardo Tavares Monteiro Fernandes Portugal | au804038@uni.au.dk |
+| Mohamed Hashem Abdou                         |          |
+| Rafael Ferreira da Costa Silva Valquaresma   | au804039@uni.au.dk |
 | Yu Jin                                       | au785458@uni.au.dk |
-|Rafael Ferreira da Costa Silva Valquaresma    | au804039@uni.au.dk |
 
 ## Task Overview
 
@@ -29,10 +29,10 @@ the agent level and group level. Evaluate your solution
 
 - Implemented in:  
     - Basic Implementation
-  [`assignment1/custom_behavior_methods_1.py`](/assignment1/custom_behavior_methods_1.py)  
+  [`assignment1/custom_behavior_methods_1.py`](/irsim/MAS/assignment1/custom_behavior_methods_1.py)  
 
     - Advanced Implementation
-  [`assignment1/custom_behavior_methods_2.py`](/assignment1/custom_behavior_methods_2.py)
+  [`assignment1/custom_behavior_methods_2.py`](/irsim/MAS/assignment1/custom_behavior_methods_2.py)
 
 - **State Definition:**  
   The agent’s state is defined by its position, orientation, and distance/angular error relative to the target circle, center at [5,5] and radius 3
@@ -159,7 +159,7 @@ Metrics are calculated and printed via the `metrics_p()` function.
 
 The agent quickly learned to stay close to the circle and maintain the correct heading.
 High time-on-target ratio and low error metrics confirm robust and reliable circle-following behavior.
-The RL agent demonstrates effective and stable circle-following, with quick learning and sustained performance. The metrics reflect precise control and a policy that is well-adapted to the task, supporting the success of your implementation.
+The RL agent demonstrates effective and stable circle-following, with quick learning and sustained performance. The metrics reflect precise control and a policy that is well-adapted to the task, supporting the success of our implementation.
 
 ### Metrics Summary (Test 2)
 
@@ -171,7 +171,7 @@ The RL agent demonstrates effective and stable circle-following, with quick lear
 
 - **Mean radial error (1.80) and mean angular error (1.34) are high**, indicating agents often deviated from the target circle and were frequently misaligned.
 - **Time on target ratio is 0.00**, showing agents were almost never able to follow the intended trajectory.
-- **Avoid ratio of 65.67%** suggests agents spent most of the simulation actively avoiding obstacles rather than performing the desired circle-following behavior.
+- **Avoid ratio of 65.67%** suggests agents spent most of the simulation actively avoiding obstacles and the other agents as priority rather than performing the desired circle-following behavior.
 - **Minimum and mean separation (0.68 and 0.73)** are relatively low, pointing to frequent close encounters between agents, likely due to crowding or challenging navigation.
 - **Total steps (150) are much lower than in other tests,** indicating a shorter or more challenging simulation scenario that limited learning opportunities.
 
@@ -182,9 +182,13 @@ Test 2 demonstrates a very challenging environment with obstacle avoidance domin
 
 ## Conclusion
 
-The results of this assignment show that the implemented reinforcement learning and subsumption architectures enable agents in a multi-agent system to learn and effectively follow a circular trajectory. In both basic and advanced scenarios, agents quickly converged to a stable and precise policy, as evidenced by the low mean radial and angular errors and the high time-on-target ratios.
+## Conclusion
 
-In the advanced tests, the system demonstrated robust performance even as the number of steps and agents increased. The agents maintained close proximity without colliding, and the need for obstacle avoidance was minimal—reflected by an avoid ratio near zero in the final test. This indicates that the learned policy not only achieves the desired circle-following behavior but also scales well in a multi-agent context, with agents able to coordinate and do avoidance maneuvers.
+The results from both basic and advanced tests highlight the strengths and limitations of our multi-agent reinforcement learning solution for circle following.
 
-Overall, the assignment validates the effectiveness of reinforcement learning in multi-agent robotic navigation. The quantitative metrics confirm that agents reach and sustain high-quality behavior, and the architecture is adaptable and reliable for both individual and group-level coordination.
+In the **basic scenario**, agents rapidly learned to follow the circle with high precision and stability, as shown by the low mean radial and angular errors and a high time-on-target ratio. This demonstrates that the RL approach is highly effective for coordinated control when the environment is less challenging and agent interactions are minimal.
+
+In the **advanced scenario**, the presence of obstacles and increased agent interactions made the environment significantly more challenging. The metrics from Test 2 reveal that agents spent most of their time avoiding obstacles and other agents, resulting in high mean errors and a time-on-target ratio of zero. The frequent close encounters and low separation values suggest that navigation and coordination become much harder as complexity rises. 
+
+Overall, the experiments show that while our RL and subsumption architecture can achieve robust and reliable circle-following behavior in controlled settings, performance declines in highly dynamic or crowded environments where obstacle avoidance must take priority. These findings reinforce the importance of environment design, agent coordination strategies, and adaptive behaviors for scalable multi-agent learning. Future work should focus on improving obstacle avoidance integration and enabling more effective learning in dense, complex scenarios.
 
