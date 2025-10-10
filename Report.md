@@ -182,8 +182,6 @@ Test 2 demonstrates a very challenging environment with obstacle avoidance domin
 
 ## Conclusion
 
-## Conclusion
-
 The results from both basic and advanced tests highlight the strengths and limitations of our multi-agent reinforcement learning solution for circle following.
 
 In the **basic scenario**, agents rapidly learned to follow the circle with high precision and stability, as shown by the low mean radial and angular errors and a high time-on-target ratio. This demonstrates that the RL approach is highly effective for coordinated control when the environment is less challenging and agent interactions are minimal.
@@ -191,4 +189,8 @@ In the **basic scenario**, agents rapidly learned to follow the circle with high
 In the **advanced scenario**, the presence of obstacles and increased agent interactions made the environment significantly more challenging. The metrics from Test 2 reveal that agents spent most of their time avoiding obstacles and other agents, resulting in high mean errors and a time-on-target ratio of zero. The frequent close encounters and low separation values suggest that navigation and coordination become much harder as complexity rises. 
 
 Overall, the experiments show that while our RL and subsumption architecture can achieve robust and reliable circle-following behavior in controlled settings, performance declines in highly dynamic or crowded environments where obstacle avoidance must take priority. These findings reinforce the importance of environment design, agent coordination strategies, and adaptive behaviors for scalable multi-agent learning. Future work should focus on improving obstacle avoidance integration and enabling more effective learning in dense, complex scenarios.
+
+## Code
+
+Available at https://github.com/Valquaresma03/MAS/tree/main
 
