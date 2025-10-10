@@ -5,7 +5,7 @@
 | Name                                         |   Email  |
 |--------------------------------------------- |----------|
 | Bernardo Tavares Monteiro Fernandes Portugal | au804038@uni.au.dk |
-| Mohamed Hashem Abdou                         |          |
+| Mohamed Hashem Abdou                         | au656408@uni.au.dk |
 | Rafael Ferreira da Costa Silva Valquaresma   | au804039@uni.au.dk |
 | Yu Jin                                       | au785458@uni.au.dk |
 
